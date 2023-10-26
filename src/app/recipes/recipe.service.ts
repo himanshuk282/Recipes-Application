@@ -30,7 +30,9 @@ export class RecipeService{
         //using slice method without parameters to send a copy of recipes array
         return this.recipes.slice();
     }
-
+    getRecipe(index:number):Recipe{
+        return this.recipes[index];
+    }
     addIngredientsToShoppingList(ingredients:Ingredient[]){
         this.slService.addIngredients(ingredients);
     }
